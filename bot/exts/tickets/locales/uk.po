@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: sketchbot\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UK\n"
+
+#: bot/exts/tickets/create.py:29
+msgid "Problem"
+msgstr "Проблема"
+
+#: bot/exts/tickets/create.py:30
+msgid "What seems to be the problem?"
+msgstr "Будь ласка опишіть вашу проблему"
+
+#: bot/exts/tickets/create.py:36
+msgid "Create Ticket"
+msgstr "Створити тікет"
+
+#: bot/exts/tickets/create.py:72
+msgid "Successfully created a ticket for for you {channel}"
+msgstr "Успішно створено тікет для вас {channel}"

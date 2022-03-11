@@ -1,0 +1,8 @@
+bot:
+    token: !ENV "BOT_TOKEN"
+    db: !ENV "MONGODB"
+
+
+style:
+    colours:
+        pastel_purple: 0xdf00f3
