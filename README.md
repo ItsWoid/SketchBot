@@ -1,0 +1,2 @@
+# SketchBot
+ A discord bot
