@@ -16,8 +16,7 @@ class SketchBot(commands.InteractionBot):
             intents=intents,
         )
 
-        print(type(Bot.db), flush=True)
-        client = AsyncIOMotorClient("mongodb+srv://FireLite:l7ecZNau88kjc045@firelite.renik.mongodb.net/SketchBot?retryWrites=true&w=majority")
+        client = AsyncIOMotorClient(Bot.db)
         self.engine = AIOEngine(motor_client=client, database="SketchBot")
 
     async def on_ready(self):
