@@ -1,9 +1,12 @@
+from dataclasses import dataclass
+
 import disnake
 from disnake.ext import commands
 
 from bot.constants import Roles
 
 
+@dataclass(frozen=True)
 class AssignableRole:
 
     role_id: int
