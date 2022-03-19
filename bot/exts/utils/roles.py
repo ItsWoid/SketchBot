@@ -1,6 +1,13 @@
 import disnake
 from disnake.ext import commands
 
+from bot.constants import Roles
+
+
+class AssignableRole:
+
+    role_id: int
+
 
 ROLES = {
     "doggo_daily": 943131658935238687,
@@ -9,6 +16,14 @@ ROLES = {
     "controller": 943132666528690226,
     "keyboard": 943132790587818035
 }
+
+ASSIGNABLE_ROLES = (
+    AssignableRole(Roles.doggo_daily),
+    AssignableRole(Roles.sneak_peaks),
+    AssignableRole(Roles.mobile),
+    AssignableRole(Roles.controller),
+    AssignableRole(Roles.keyboard),
+)
 
 
 class RolesView(disnake.ui.View):
@@ -62,26 +77,22 @@ class RolesView(disnake.ui.View):
         await author.add_roles(*add_roles)
         await inter.response.defer()
 
-class Roles(
-    commands.Cog,
-):
-    def __init__(self, bot):
-        self.bot = bot
-
-    async def cog_load(self):
-        """await self.bot.wait_until_ready()
-        channel = self.bot.get_channel(790248778895589419)
-        message = await channel.fetch_message(951112219926605854)
-        embed = disnake.Embed()
-        embed.title = "Select your roles"
-        embed.description = (
-            "Select any of the following roles to get exclusive pings about any of the following:\n\n"
-            "🐕 Doggo Daily\n"
-            "👀 Sneak Peaks\n"
-            "📱 Mobile\n"
-            "🎮 Controller\n"
-            "⌨️ Keyboard"
-        )
-        embed.color = 0x8f16fc
-        await message.edit(embed=embed, view=RolesView())"""
-        self.bot.add_view(RolesView())
+#class Roles:
+#
+#    async def cog_load(self):
+#        """await self.bot.wait_until_ready()
+#        channel = self.bot.get_channel(790248778895589419)
+#        message = await channel.fetch_message(951112219926605854)
+#        embed = disnake.Embed()
+#        embed.title = "Select your roles"
+#        embed.description = (
+#            "Select any of the following roles to get exclusive pings about any of the following:\n\n"
+#            "🐕 Doggo Daily\n"
+#            "👀 Sneak Peaks\n"
+#            "📱 Mobile\n"
+#            "🎮 Controller\n"
+#            "⌨️ Keyboard"
+#        )
+#        embed.color = 0x8f16fc
+#        await message.edit(embed=embed, view=RolesView())"""
+#        self.bot.add_view(RolesView())

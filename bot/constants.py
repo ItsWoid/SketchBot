@@ -70,3 +70,22 @@ class Colours(metaclass=YAMLGetter):
     subsection = "colours"
 
     pastel_purple: int
+
+
+class Channels(metaclass=YAMLGetter):
+    section = "guild"
+    subsection = "channels"
+
+    create: int
+
+
+class Roles(metaclass=YAMLGetter):
+    section = "guild"
+    subsection = "roles"
+
+    # Self-assignable roles
+    doggo_daily: int
+    sneak_peaks: int
+    mobile: int
+    controller: int
+    keyboard: int

@@ -6,3 +6,21 @@ bot:
 style:
     colours:
         pastel_purple: 0xdf00f3
+
+
+guild:
+    channels:
+        # Voice Channels
+        create: 845307225689817089
+    
+    roles:
+        # Self-assignable roles
+        doggo_daily: 943131658935238687
+        sneak_peaks: 943132022308753468
+        mobile:      943132298553991178
+        controller:  943132666528690226
+        keyboard:    943132790587818035
+
+
+keys:
+    youtube: !ENV "YOUTUBE"

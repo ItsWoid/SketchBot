@@ -15,7 +15,7 @@ _ = Translator("Tickets", __file__)
 class TicketCreateView(disnake.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
-    
+
     @disnake.ui.button(
         label="Create Ticket", style=disnake.ButtonStyle.grey, custom_id="ticket:button:create"
     )
