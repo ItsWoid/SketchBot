@@ -29,7 +29,7 @@ class Avatar:
     @avatar.sub_command(name="guild", description="Gets a users guild avatar")
     async def avatar_guild(
         self,
-        inter: disnake.guildCommandInteraction,
+        inter: disnake.GuildCommandInteraction,
         user: disnake.User = commands.Param(
             desc="User to fetch avatar from",
         ),
